@@ -1,7 +1,11 @@
-import React from 'react'
+import './App.css'
+import TripList from './components/TripList'
+
 
 export default function App() {
   return (
-    <div>App tog'o</div>
+    <div>
+      <TripList />
+    </div>
   )
 }
