@@ -7,13 +7,17 @@ function TripList() {
 
     // useCallback(0
     
+    const fetchTrips  = useCallback(async () => {
+        const res = await fetch(url)
+        const data = await res.json()
+        setTrips(data)
+    }, [url])
+    // console.log(trips);
+
     useEffect(() => {
-         fetch(url)
-        .then((res)=> res.json())
-            .then((data) => setTrips(data))
-        },[url])
+        fetchTrips()
+        },[fetchTrips])
         
-        console.log(trips);
   return (
       <div className='trip-list'>
           <h2>TripsList</h2>
@@ -22,12 +26,11 @@ function TripList() {
               {
                   trips.map((trip) => {
                       return (
-                          <div>
-                              <li>
+                              <li key={trip.id}>
                                   <h2>{ trip.title }</h2>
-                                  <p>{ trip.price }</p>
+                                  <h4>{ trip.price }</h4>
+                                  <p>{ trip.loc }</p>
                               </li>
-                          </div>
                       )
                   })
               }

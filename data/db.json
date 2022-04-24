@@ -7,21 +7,27 @@
         "loc": "europe"
       },
       {
+        "title": "10 Night Stay in  Nyu-Meksiko",
+        "price": "£825",
+        "id": "2",
+        "loc": "america"
+      },
+      {
         "title": "3 Night Stay in Paris",
         "price": "£295",
-        "id": "2",
+        "id": "3",
         "loc": "europe"
       },
       {
         "title": "4 Night Stay in London",
         "price": "£345",
-        "id": "3",
+        "id": "4",
         "loc": "europe"
       },
       {
         "title": "3 Night Stay in New York",
         "price": "£325",
-        "id": "4",
+        "id": "5",
         "loc": "america"
       }
     ]
