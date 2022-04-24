@@ -7,9 +7,9 @@ function TripList() {
     const { data, isPending, error } = useFetch(url)
   return (
       <div className='trip-list'>
-          <h2>TripsList</h2>
+          <h1>Trips List ✈</h1>
           {isPending && <div>Loading.....</div>}
-          { error && <div>Not founddd</div>}
+          { error && <div>Not Found.</div>}
           <ul>
               {data && 
                   data.map((trip) => {
