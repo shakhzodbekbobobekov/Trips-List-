@@ -1,15 +1,16 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState } from 'react'
 import './TripList.css'
 import useFetch from '../hooks/useFetch'
 
 function TripList() {
     const [ url, setUrl ] = useState('http://localhost:3000/trips')
-    const {data, isPending} = useFetch(url)
-            
+    const { data, isPending, error } = useFetch(url)
+    
   return (
       <div className='trip-list'>
           <h2>TripsList</h2>
           {isPending && <div>Loading.....</div>}
+          { error && <div>{ error }</div>}
           <ul>
               {data && 
                   data.map((trip) => {
