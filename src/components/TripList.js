@@ -5,11 +5,13 @@ import useFetch from '../hooks/useFetch'
 function TripList() {
     const [url, setUrl] = useState('http://localhost:3000/trips')
     const { data, isPending, error } = useFetch(url)
+
   return (
       <div className='trip-list'>
           <h1>Trips List ✈</h1>
           {isPending && <div>Loading.....</div>}
-          { error && <div>Not Found.</div>}
+          { error && <div>Not Found</div> }
+         
           <ul>
               {data && 
                   data.map((trip) => {
@@ -23,9 +25,8 @@ function TripList() {
                   })
               }
               <div className="filters">
-                <button disabled={error} onClick={() => {setUrl('http://localhost:3000/trips?loc=europe')}} >europe trips</button>
-                <button disabled={error} onClick={() => {setUrl('http://localhost:3000/trips?loc=america')}} >america trips</button>
-                <button disabled={error} onClick={() => {setUrl('http://localhost:3000/trips')}} >All trips</button>
+                <button onClick={() => {setUrl('http://localhost:3000/trips?loc=america')}} >america trips</button>
+                <button onClick={() => {setUrl('http://localhost:3000/trips')}} >All trips</button>
              </div>
           </ul>
     </div>

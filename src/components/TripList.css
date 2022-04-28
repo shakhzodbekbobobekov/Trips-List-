@@ -49,3 +49,34 @@ h1 {
   color: #000;
   background-color: rgb(221, 216, 216);
 }
+
+@media (min-width: 0) and (max-width: 500px) {
+
+    .trip-list {
+        width: 70%;
+        margin: auto;
+    }
+
+    h2 {
+      font-size: 0.8rem;
+    }
+
+    h4 {
+      font-size: 0.6rem;
+    }
+
+    p {
+      font-size: 0.5rem;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    .filters button {
+      font-size: 0.8rem;
+      padding: 8px;
+      margin: 0px;
+    }
+}
+
